@@ -1,4 +1,4 @@
-# wildbg-training
+# wildbg training process
 
 This repository documents the training process of the neural nets for the backgammon engine [wildb](https://github.com/carsten-wenderdel/wildbg).
 
@@ -11,3 +11,4 @@ The first rollout happened with random moves. The second rollout used the first 
 | -------- | ------- |
 | [0001](data/0001/) | Trained on rollouts with random moves |
 | [0002](data/0002/) | |
+| [0003](data/0003/) | Use `tanh` instead of `sigmoid` for inner layer |
