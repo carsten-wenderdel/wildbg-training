@@ -13,3 +13,4 @@ The first rollout happened with random moves. The second rollout used the first 
 | [0002](data/0002/) | |
 | [0003](data/0003/) | Use `tanh` instead of `sigmoid` for inner layer |
 | [0004](data/0004/) | |
+| [0005](data/0005/) | Increased number of epochs from 10 to 20. Increased learning rate from 0.1 to 4.0 |
