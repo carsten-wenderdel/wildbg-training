@@ -12,3 +12,4 @@ The first rollout happened with random moves. The second rollout used the first 
 | [0001](data/0001/) | Trained on rollouts with random moves |
 | [0002](data/0002/) | |
 | [0003](data/0003/) | Use `tanh` instead of `sigmoid` for inner layer |
+| [0004](data/0004/) | |
