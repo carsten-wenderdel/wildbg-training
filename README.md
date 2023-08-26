@@ -14,4 +14,5 @@ The first rollout happened with random moves. The second rollout used the first 
 | [0003](data/0003/) | Use `tanh` instead of `sigmoid` for inner layer |
 | [0004](data/0004/) | |
 | [0005](data/0005/) | Increased number of epochs from 10 to 20. Increased learning rate from 0.1 to 4.0 |
-| [0005](data/0006/) | |
+| [0006](data/0006/) | |
+| [0007](data/0007/) | The 7th net is actually a bit worse than the 6th net. Less wins, less backgammon wins, but more gammon wins. |
