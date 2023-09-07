@@ -16,3 +16,4 @@ The first rollout happened with random moves. The second rollout used the first 
 | [0005](data/0005/) | Increased number of epochs from 10 to 20. Increased learning rate from 0.1 to 4.0 |
 | [0006](data/0006/) | |
 | [0007](data/0007/) | The 7th net is actually a bit worse than the 6th net. Less wins, less backgammon wins, but more gammon wins. |
+| [0008](data/0008/) | No new rollouts were done. Instead this net was trained on the combined rollout data of iteration [6](data/0006/rollouts.csv) and [7](data/0007/rollouts.csv). The network topology has been changed from one hidden layer with `tanh` activation to three hidden layers with `ReLu` activation. |
