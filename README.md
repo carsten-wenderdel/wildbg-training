@@ -17,3 +17,4 @@ The first rollout happened with random moves. The second rollout used the first 
 | [0006](data/0006/) | |
 | [0007](data/0007/) | The 7th net is actually a bit worse than the 6th net. Less wins, less backgammon wins, but more gammon wins. |
 | [0008](data/0008/) | No new rollouts were done. Instead this net was trained on the combined rollout data of iteration [6](data/0006/rollouts.csv) and [7](data/0007/rollouts.csv). The network topology has been changed from one hidden layer with `tanh` activation to three hidden layers with `ReLu` activation. |
+| [0009](data/0009/) | Rollouts were done with the net from iteration [8](data/0008/wildbg.onnx). We now have different sets of data for contact and race positions, two different networks and also two different number of inputs. Combined they are better than the 8th iteration, but lose a lot of backgammons because the contact network is too optimistic. It will avoid going into a race and then loses backgammon instead. |
