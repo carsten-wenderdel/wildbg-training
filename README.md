@@ -3,7 +3,13 @@
 This repository documents the training process of the neural nets for the backgammon engine [wildbg](https://github.com/carsten-wenderdel/wildbg).
 
 Each folder contains rollout data and the neural net that was trained on that data.
-The first rollout happened with random moves. The second rollout used the first net for evaluating moves etc.
+The first rollout happened with random moves. Later rollouts used previous nets.
+
+There are some issues with the rollout data:
+- Some position IDs in the folders [0009](data/0009/), [0010](data/0010/), [0012](data/0012/) and [0015](data/0015/)
+  have been encoded wrongly. See https://github.com/carsten-wenderdel/wildbg/issues/27
+- [0015](data/0015/) contains rollout data for race positions. Due to poor choice of positions training on that data
+  will lead to worse nets that previous data.
 
 ## 
 
