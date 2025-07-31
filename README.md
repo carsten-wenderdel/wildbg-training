@@ -8,8 +8,6 @@ The first rollout happened with random moves. Later rollouts used previous nets.
 There are some issues with the rollout data:
 - Some position IDs in the folders [0009](data/0009/), [0010](data/0010/), [0012](data/0012/) and [0015](data/0015/)
   have been encoded wrongly. See https://github.com/carsten-wenderdel/wildbg/issues/27
-- [0015](data/0015/) contains rollout data for race positions. Due to poor choice of positions training on that data
-  will lead to worse nets that previous data.
 
 ## 
 
@@ -29,3 +27,6 @@ There are some issues with the rollout data:
 | [0012](data/0012/) | Increased number of epochs from 20 to 50. The race data was rolled out with race #9 and contact #11 (each most recent). The contact data was rolled out with race #12 and contact #12. For the contact net we switched from Adam to AdamW, seems to be a small improvement. Overall dramatic improvement over the previous nets, they now only lose 0.7% backgammon. |
 | [0013](data/0013/) | No new rollouts. The contact net is using `Hardsigmoid` instead of `ReLU` as activation function. It seems to give slightly better results (equity win 0.01), but inference also takes a bit longer. |
 | [0014](data/0014/) | No new rollouts. The contact net is trained on the same data as the two previous ones, just a few more epochs, a slightly smaller learning rate and more careful comparisons between different onnx files. Equity win of 0.01. |
+| [0015](data/0015/) | Contains rollout data for race positions, but no net. Due to poor choice of positions training on that data will lead to worse nets than previous ones. |
+| [0016](data/0016/) | Race data: Finding the positions was done with contact [11](data/0011/contact.onnx) and race [9](data/0009/race.onnx). Rollouts were done with race [12](data/0012/race.onnx). Race net: We now use `CrossEntropyLoss`, `ReLU`, 83 epochs. |
+| [0017](data/0017/) | Contact data: Finding the positions was done with contact [11](data/0011/contact.onnx) and race [9](data/0009/race.onnx). Rollouts were done with contact [14](data/0014/contact.onx) and race [16](data/0016/race.onnx). Contact net: We now use `CrossEntropyLoss`, `HardSigmoid`, 80 epochs. The latest nets (16/17) bring an equity win of 0.021 compared to contact [14](data/0014/contact.onx) and race [12](data/0012/race.onnx).|
