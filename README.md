@@ -11,6 +11,7 @@ There are some issues with the rollout data:
 
 | Data | Remarks |
 | -------- | ------- |
+| [0019](data/0019/) | No new rollouts. After removing a bug in the training process regarding winning gammon a new contact net was trained. For PyTorch we still use `AdamW`, 267 epochs. This brings an equity win of roughly 1 millipoints compared to contact [17](data/0017/contact.onnx).|
 | [0018](data/0018/) | No new rollouts. After removing a bug in the training process regarding winning gammon a new race net was trained. For PyTorch we again use SGD, this time with `CosineAnnealingWarmRestarts`, 183 epochs. This brings an equity win of 1.3 millipoints compared to race [16](data/0016/race.onnx).|
 | [0017](data/0017/) | Contact data: Finding the positions was done with contact [11](data/0011/contact.onnx) and race [9](data/0009/race.onnx). Rollouts were done with contact [14](data/0014/contact.onx) and race [16](data/0016/race.onnx). Contact net: We now use `CrossEntropyLoss`, `HardSigmoid`, 80 epochs. The latest nets (16/17) bring an equity win of 0.021 compared to contact [14](data/0014/contact.onx) and race [12](data/0012/race.onnx).|
 | [0016](data/0016/) | Race data: Finding the positions was done with contact [11](data/0011/contact.onnx) and race [9](data/0009/race.onnx). Rollouts were done with race [12](data/0012/race.onnx). Race net: We now use `CrossEntropyLoss`, `ReLU`, 83 epochs. |
