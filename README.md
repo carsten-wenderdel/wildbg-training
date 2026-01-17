@@ -5,12 +5,13 @@ This repository documents the training process of the neural nets for the backga
 Each folder contains rollout data and the neural net that was trained on that data.
 The first rollout happened with random moves. Later rollouts used previous nets.
 
-There are some issues with the rollout data:
+There are issues with some oder rollout data:
 - Some position IDs in the folders [0009](data/0009/), [0010](data/0010/), [0012](data/0012/) and [0015](data/0015/)
   have been encoded wrongly. See https://github.com/carsten-wenderdel/wildbg/issues/27
 
 | Data | Remarks |
 | -------- | ------- |
+| [0021](data/0021/) | Contact data: Rolling out the same positions as for #17 and #20 with the race net #18 and contact net #20. 282 epochs, improvement of roughly 1.5 millipoints over #20.|
 | [0020](data/0020/) | Contact data: Rolling out the same positions as for #17 with the race net #18 and contact net #19. 151 epochs, improvement of roughly 3 millipoints over #19.|
 | [0019](data/0019/) | No new rollouts. After removing a bug in the training process regarding winning gammon a new contact net was trained. For PyTorch we still use `AdamW`, 267 epochs. This brings an equity win of roughly 1 millipoint compared to contact [17](data/0017/contact.onnx).|
 | [0018](data/0018/) | No new rollouts. After removing a bug in the training process regarding winning gammon a new race net was trained. For PyTorch we again use SGD, this time with `CosineAnnealingWarmRestarts`, 183 epochs. This brings an equity win of 1.3 millipoints compared to race [16](data/0016/race.onnx).|
